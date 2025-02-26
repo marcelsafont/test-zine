@@ -1,0 +1,10 @@
+@keyframes shrinkHeight {
+  from {
+      height: 100vh;
+      transform: translateX(0);
+  }
+  to {
+      height: 50px;
+      transform: translateX(-550px);
+  }
+}

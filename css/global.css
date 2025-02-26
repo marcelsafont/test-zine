@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #2D2D29;
+  --secondary-color: #C3D400;
+  --terciary-color:#fff;
+  --text-color: #2D2D29;
+  --padding: 20px;
+  --border-radius-big: 30px;
+  --border-radius-medium:16px;
+  --gap: 20px;
+  --big-gap:75px;
+  --base-font: 20px;
+  --h1-size: 80px;
+  --h3-size: 38px;
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url('fonts/hostgrotesk-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url('fonts/hostgrotesk-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html, body{
+  line-height:1.6em;
+  color: var(--text-color);
+  font-size: var(--base-font);
+  font-family: 'grotesk', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2{
+  font-size:var(--h1-size);
+  font-weight:700;
+  line-height:1.05em;
+  letter-spacing: -1px;
+}
+
+h3{
+  font-size:var(--h3-size);
+  line-height:1.05em;
+}
+
+#header{
+  padding:70px 0 10px 0;
+}
+
+#main b, 
+#main strong{
+  color:var(--secondary-color);
+}
+
+#main p{
+
+}
+
+.container{
+  max-width:1280px;
+  padding:0 80px;
+  margin:auto;
+}
+
+@media screen and (max-width:1360px){
+  .container{
+    padding:0 40px;
+  }
+}
+
+#big-logo{
+  max-width:1400px;
+  margin:auto;
+  position:relative;
+}
+
+#big-logo img{
+  animation: shrinkHeight 3s ease-in-out forwards;
+}
+
+.flex{
+  display:flex;
+  gap: var(--gap);
+}
+
+.sb{
+  justify-content: space-between;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+/* .grid-two-cols{
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+.grid-three-cols{
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+} */
+
+
