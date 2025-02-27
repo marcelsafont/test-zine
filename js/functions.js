@@ -1,8 +1,9 @@
 addEventListener('DOMContentLoaded', function () {
   document.querySelector('#menu-switcher').addEventListener('click', function () {
     if (this.classList.contains('open')) {
+      animateTranslate3d(true);
       document.querySelector('#menu-switcher').classList.remove('open');
-      document.querySelector('#main-menu').classList.remove('show');
+      
     } else {
       document.querySelector('#menu-switcher').classList.add('open');
       document.querySelector('#main-menu').classList.add('show');
@@ -31,28 +32,36 @@ addEventListener('DOMContentLoaded', function () {
     }
   
   
-    function animateTranslate3d() {
+  function animateTranslate3d(isReversing = false) {
       const menu = document.querySelector("#main-menu .menu");
       let duration = 500; // Animation duration in ms
       let startTime = null;
-    
+  
       function step(timestamp) {
           if (!startTime) startTime = timestamp;
           let progress = (timestamp - startTime) / duration;
+  
+          if (progress > 1) progress = 1; // Ensure it stops at 1
+  
+          let easedProgress = easeOutCubic(progress);
+  
+          // Reverse animation if rolling back
+          let scaleValue = isReversing ? 1 - easedProgress : easedProgress;
           
-        if (progress > 1) progress = 1; // Ensure it stops at 1
-        
-        let easedProgress = easeOutCubic(progress);
-          // Apply translate3d animation (X moves from 0 to 100px)
-          menu.style.transform = `translate3d(0px, 0px, 0px) scale3d(${easedProgress}, ${easedProgress}, 1)`;
-    
+          // Apply transform
+          menu.style.transform = `translate3d(0px, 0px, 0px) scale3d(${scaleValue}, ${scaleValue}, 1)`;
+  
           if (progress < 1) {
               requestAnimationFrame(step);
+          } else {
+            if (isReversing) {
+              document.querySelector('#main-menu').classList.remove('show');
+            }
           }
       }
-    
+  
       requestAnimationFrame(step);
-    }
+  }
 })
 
 
