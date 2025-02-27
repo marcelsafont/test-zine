@@ -115,12 +115,13 @@
   left:0;
 }
 
-.has-separator .content-separator{
-  position:relative;
-}
 
 .inner-header{
   padding-top:70px;
+}
+
+.inner-header h1{
+  font-size:67px;
 }
 
 .inner-header .imatge{
@@ -128,8 +129,19 @@
   flex:420px;
 }
 
+.inner-header .content-separator:before{
+  
+}
+
 .inner-header .text{
   padding-right:50px;
+  display:flex;
+  flex-direction: column;
+  gap:39px;
+}
+
+.inner-header .text p + p{
+  padding-top:15px;
 }
 
 .inner-header .imatge img{
