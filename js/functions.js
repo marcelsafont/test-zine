@@ -50,7 +50,7 @@ addEventListener('DOMContentLoaded', function () {
           
           // Apply transform
           menu.style.transform = `translate3d(0px, 0px, 0px) scale3d(${scaleValue}, ${scaleValue}, 1)`;
-  
+          menu.style.opacity = `${ scaleValue }`;
           if (progress < 1) {
               requestAnimationFrame(step);
           } else {
@@ -63,6 +63,17 @@ addEventListener('DOMContentLoaded', function () {
       requestAnimationFrame(step);
   }
 })
+
+window.addEventListener("scroll", function() {
+  let scrollPosition = window.scrollY;
+  let element = document.querySelector("body"); // Change to any element you want
+
+  if (scrollPosition > 100) {
+    document.querySelector('body').classList.add('scrolled')
+    document.querySelector('#header-home').classList.add('scrolled')
+  }
+});
+
 
 
 
