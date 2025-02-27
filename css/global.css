@@ -27,6 +27,14 @@
 
 @font-face {
   font-family: 'grotesk';
+  src: url('../fonts/hostgrotesk-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'grotesk';
   src: url('../fonts/hostgrotesk-medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
@@ -61,15 +69,16 @@ h1, h2{
   font-size:var(--h1-size);
   font-weight:700;
   line-height:1.05em;
-  letter-spacing: -1px;
-  padding-bottom:15px;
+}
+
+h2{
+  font-weight:600;
 }
 
 h3{
   font-size:var(--h3-size);
   line-height:1.05em;
   font-weight: 500;
-  padding-bottom:10px;
 }
 
 h3.title-body{
@@ -79,10 +88,7 @@ h3.title-body{
 a{
   text-decoration: none;
   color:var(--primary-color);
-}
-
-p{
-  margin-top:20px;
+  transition: all .5s;
 }
 
 img{
@@ -164,7 +170,6 @@ img{
 #main-menu .menu a{
   font-size:var(--font-size-big);
   line-height:1.5em;
-  transition: all .5s;
   font-weight: 700;
 }
 
@@ -239,6 +244,10 @@ img{
   text-align: right;
 }
 
+#footer .menu-footer ul li a:hover{
+  color:var(--secondary-color);
+}
+
 #footer .footer-cols{
   border-top:8px solid var(--primary-color);
   padding-top: 72px;
@@ -256,6 +265,15 @@ img{
   display:flex;
   flex-direction: column;
   gap:13px;
+}
+
+#footer .social{
+  gap:12px;
+}
+
+#footer .social a{
+  display:inline-block;
+  height:25px;
 }
 
 #header-home{

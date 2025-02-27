@@ -82,7 +82,7 @@
 .text-image .card .content{
   position:absolute;
   bottom:0px;
-  padding:48px 32px;
+  padding:48px 52px 48px 32px;
   display:flex;
   flex-direction: column;
   gap:16px;
@@ -93,8 +93,9 @@
 }
 .text-image .card .content p{
   color:var(--terciary-color);
-  line-height:1.1em;
+  line-height:1.3em;
   font-weight:800;
+  font-size:18px;
 }
 
 .text-image .card img{
@@ -102,6 +103,20 @@
   width:100%;
   height:100%;
   border-radius:var(--border-radius-big);
+}
+
+.has-separator .content-separator:before{
+  content:"";
+  width:70px;
+  height:1px;
+  background-color:var(--primary-color);
+  position:absolute;
+  top:-30px;
+  left:0;
+}
+
+.has-separator .content-separator{
+  position:relative;
 }
 
 .inner-header{
