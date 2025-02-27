@@ -159,7 +159,9 @@ img{
   position:relative;
   flex:220px;
   border-radius:var(--border-radius-extrabig);
-
+  transform-style: preserve-3d;
+  perspective-origin: 100% 0;
+    transform-origin: 100% 0;
 }
 
 #main-menu.show .menu{
@@ -294,7 +296,7 @@ img{
   height:100vh;
   background-color:#fff;
   display:flex;
-  animation: shrinkHeight 1s ease-in-out forwards, fadeOut 1s linear forwards;
+  animation: shrinkHeight 2s ease-in-out forwards, fadeOut 2s linear forwards;
   justify-content: center;
   align-items: center;
 }
@@ -313,7 +315,7 @@ img{
 
 #header-home img{
   width:100%;
-  animation: shrinkLogo 1s ease-in-out forwards;
+  animation: shrinkLogo 2s ease-in-out forwards;
 }
 
 /* .grid-two-cols{
