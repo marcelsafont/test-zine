@@ -1,9 +1,19 @@
+
+.animate-element{
+  opacity:0;
+}
+
+.animate-element.animate{
+  animation: fadeIn 2s forwards;
+}
 .btn a{
   display:inline-block;
   padding:8px 24px;
   border-radius:var(--border-radius-medium);
   text-decoration: none;
   transition: all .5s;
+  font-size:18px;
+  font-weight:500;
 }
 
 .btn-primary a{
@@ -26,7 +36,16 @@
 
 .text-image{
   padding:90px 0;
-  min-height:600px;
+  min-height:580px;
+  /* animation: fadeIn;
+  animation-timeline: view();
+  animation-range: entry 50% cover 60%;
+  opacity: 0; */
+}
+
+.text-image.reverse .text{
+  padding-right:0;
+  padding-left:50px;
 }
 
 .text-columns{
@@ -36,6 +55,16 @@
 .text-columns .columns{
   padding:40px 100px 0 100px;
   gap:var(--big-gap);
+}
+
+.text-columns .columns p{
+  margin:0;
+}
+
+.text-columns .columns > div{
+  display:flex;
+  flex-direction: column;
+  gap:26px;
 }
 
 .text-image .text{
@@ -72,4 +101,24 @@
   width:100%;
   height:100%;
   border-radius:var(--border-radius-big);
+}
+
+.inner-header{
+  padding-top:70px;
+}
+
+.inner-header .imatge{
+  max-width:420px;
+  flex:420px;
+}
+
+.inner-header .text{
+  padding-right:50px;
+}
+
+.inner-header .imatge img{
+  border-radius:36px;
+  object-fit: cover;
+  width:100%;
+  height:100%;
 }
