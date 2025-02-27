@@ -6,6 +6,7 @@ addEventListener('DOMContentLoaded', function () {
     } else {
       document.querySelector('#menu-switcher').classList.add('open');
       document.querySelector('#main-menu').classList.add('show');
+      animateTranslate3d();
     }
   })
   const boxes = document.querySelectorAll(".animate-element"); // Select all elements with class "box"
@@ -25,7 +26,35 @@ addEventListener('DOMContentLoaded', function () {
         console.error("No elements with class 'box' found!");
     }
   
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+  
+  
+    function animateTranslate3d() {
+      const menu = document.querySelector("#main-menu .menu");
+      let duration = 500; // Animation duration in ms
+      let startTime = null;
+    
+      function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          let progress = (timestamp - startTime) / duration;
+          
+        if (progress > 1) progress = 1; // Ensure it stops at 1
+        
+        let easedProgress = easeOutCubic(progress);
+          // Apply translate3d animation (X moves from 0 to 100px)
+          menu.style.transform = `translate3d(0px, 0px, 0px) scale3d(${easedProgress}, ${easedProgress}, 1)`;
+    
+          if (progress < 1) {
+              requestAnimationFrame(step);
+          }
+      }
+    
+      requestAnimationFrame(step);
+    }
 })
+
 
 
 

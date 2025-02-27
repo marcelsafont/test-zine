@@ -1,11 +1,9 @@
-/* @keyframes shrinkHeight {
+@keyframes shrinkHeight {
   from {
       height: 100vh;
-      transform: translateX(0);
   }
   to {
-      height: 50px;
-      transform: translateX(-100px);
+      height: 55px;
   }
 }
 
@@ -14,9 +12,9 @@
     width:100%;
   }
   to{
-    width:117px;
+    width:175px;
   }
-} */
+}
 
 @keyframes fadeIn {
   from{
@@ -24,5 +22,16 @@
   }
   to{
     opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  99% {
+      opacity:1;
+      z-index:4;
+  }
+  100% {
+      opacity:0;
+      z-index: -1;
   }
 }

@@ -157,8 +157,16 @@ img{
   background-color:var(--secondary-color);
   padding:130px 128px 95px 90px;
   position:relative;
-  min-width:630px;
+  flex:220px;
   border-radius:var(--border-radius-extrabig);
+  transform: translate3d(0, 0, 1);
+  transform-style: preserve-3d;
+  perspective-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+#main-menu.show .menu{
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
 }
 
 #main-menu .menu ul{
@@ -278,21 +286,26 @@ img{
 
 #header-home{
   position:absolute;
-  top:0;
+  top:70px;
   left:0;
-  z-index:3;
+  z-index:10;
   width:100%;
   height:100vh;
   background-color:#fff;
   display:flex;
-  animation: shrinkHeight 3s ease-in-out forwards;
+  animation: shrinkHeight 2s ease-in-out forwards, fadeOut 2s linear forwards;
   justify-content: center;
   align-items: center;
 }
 
+#header-home .container{
+  width:1280px;
+  padding:3px 0 0 0;
+}
+
 #header-home img{
   width:100%;
-  animation: shrinkLogo 3s ease-in-out forwards;
+  animation: shrinkLogo 2s ease-in-out forwards;
 }
 
 /* .grid-two-cols{
