@@ -144,13 +144,17 @@ img{
 #main-menu{
   position:absolute;
   z-index:2;
-  background:rgba(255,255,255,0.8);
   top:0;
   left:0;
   width:100%;
   padding:70px 0;
   display:none;
   min-height:600px;
+}
+
+#main-menu .container{
+  opacity:0;
+  background:rgba(255,255,255,0.8);
 }
 
 #main-menu .menu{
@@ -198,6 +202,7 @@ img{
 
 #main-menu.show{
   display:block;
+ 
 }
 
 #big-logo{
@@ -289,28 +294,28 @@ img{
 
 #header-home{
   position:absolute;
-  top:10px;
+  top:70px;
   left:0;
   z-index:10;
   width:100%;
   height:100vh;
   background-color:#fff;
   display:flex;
-  /* animation: shrinkHeight 2s ease-in-out forwards, fadeOut 2s linear forwards; */
-  animation: shrinkHeight 2s ease-in-out forwards;
+  animation: shrinkHeight 1.5s ease-in-out forwards, fadeOut 1.5s linear forwards;
   justify-content: center;
   align-items: center;
 }
 
-#header-home.scrolled{
-  /* display:none; */
-  animation: shrinkLogo 2s ease-in-out forwards;
+#header-home .logo img{
+  animation: shrinkLogo 1.5s ease-in-out forwards;
 }
 
+
 #header-home .container{
-  width:1280px;
+  min-width:1280px;
   padding:3px 0px 0 0px;
   background-color:#fff;
+  margin:auto;
 }
 
 @media screen and (max-width:1360px){
@@ -320,10 +325,10 @@ img{
   }
 }
 
-.front #main{
+/* .front #main{
   padding-top:200px;
   transition: all .3s;
-}
+} */
 
 .front.scrolled #main{
   padding-top:0;

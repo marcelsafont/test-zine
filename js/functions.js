@@ -33,7 +33,8 @@ addEventListener('DOMContentLoaded', function () {
   
   
   function animateTranslate3d(isReversing = false) {
-      const menu = document.querySelector("#main-menu .menu");
+    const menu = document.querySelector("#main-menu .menu");
+    const container = document.querySelector("#main-menu .container");
       let duration = 500; // Animation duration in ms
       let startTime = null;
   
@@ -50,7 +51,7 @@ addEventListener('DOMContentLoaded', function () {
           
           // Apply transform
           menu.style.transform = `translate3d(0px, 0px, 0px) scale3d(${scaleValue}, ${scaleValue}, 1)`;
-          menu.style.opacity = `${ scaleValue }`;
+          container.style.opacity = `${ scaleValue }`;
           if (progress < 1) {
               requestAnimationFrame(step);
           } else {
@@ -62,17 +63,19 @@ addEventListener('DOMContentLoaded', function () {
   
       requestAnimationFrame(step);
   }
+  // window.addEventListener("scroll", function() {
+  //   let scrollPosition = window.scrollY;
+  //   let element = document.querySelector(".front #main"); // Change to any element you want
+  
+  //   if (scrollPosition > 100) {
+  //     // element.style.paddingTop = '100px';
+  //     // document.querySelector('body').classList.add('scrolled')
+  //     // document.querySelector('#header-home').classList.add('scrolled')
+  //   }
+  // });
 })
 
-window.addEventListener("scroll", function() {
-  let scrollPosition = window.scrollY;
-  let element = document.querySelector("body"); // Change to any element you want
 
-  if (scrollPosition > 100) {
-    document.querySelector('body').classList.add('scrolled')
-    document.querySelector('#header-home').classList.add('scrolled')
-  }
-});
 
 
 
