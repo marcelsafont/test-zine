@@ -1,4 +1,19 @@
 addEventListener('DOMContentLoaded', function () {
+
+  // acordions
+
+  const titles = document.querySelectorAll('.acordions .title')
+
+  titles.forEach(item => {
+    item.addEventListener('click', function (e) {
+      const text = item.nextElementSibling;
+      if (item.parentNode.classList.contains('open')) {
+        item.parentNode.classList.remove('open')
+        return
+      }
+      item.parentNode.classList.add('open')
+    })
+  })
   document.querySelector('#menu-switcher').addEventListener('click', function () {
     if (this.classList.contains('open')) {
       animateTranslate3d(true);
