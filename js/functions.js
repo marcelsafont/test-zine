@@ -34,7 +34,7 @@ addEventListener('DOMContentLoaded', function () {
                     entry.target.classList.add("animate"); // Add class to each observed element
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.2 });
 
         // Observe each `.box` element
         boxes.forEach(box => observer.observe(box));
