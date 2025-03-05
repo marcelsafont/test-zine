@@ -163,7 +163,7 @@
 }
 
 .acordions .items{
-  max-width:600px;
+  max-width:1000px;
   margin:auto;
 }
 
@@ -276,6 +276,22 @@
   display:flex;
   flex-direction: column;
   gap:24px;
+}
+
+.form-module .form-item.form-upload input{
+  display:none;
+}
+
+.form-module .form-item.form-upload label:after{
+  display:block;
+  border:1px dotted #000;
+  background-color:#fff;
+  text-align: center;
+  border-radius:24px;
+  margin-top:10px;
+  padding:20px 50px;
+  content:"Arrastra aquí tu cv en formato pdf o doc. Solo 1 archivo. Límite de peso 2 Mb.";
+
 }
 
 .form-module .center{
