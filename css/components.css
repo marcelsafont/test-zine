@@ -52,10 +52,6 @@
   flex: 0 0 500px;
 }
 
-.text-image.big-image .card{
-  height:500px;
-}
-
 .text-image .extra-text{
   padding:70px 0 40px 0;
   max-width:850px;
@@ -423,7 +419,7 @@
   line-height:28px;
   color:var(--black-90);
   font-weight:300;
-  background:url('../images/pin.svg') no-repeat left top;
+  background:url('../images/phone.svg') no-repeat left top;
 }
 
 .contact-form .form-module{
@@ -443,6 +439,9 @@
   }
   .text-image .text{
     padding-right:0;
+  }
+  .text-image.big-image .text{
+    flex:1;
   }
   .text-image .card{
     flex:0 0 400px;
