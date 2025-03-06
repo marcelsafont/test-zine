@@ -3,6 +3,8 @@
   --primary-color-light: #4C4D43;
   --secondary-color: #C3D400;
   --terciary-color:#fff;
+  --black-90: #212121;
+  --black-50: #F2F2F2;
   --bg-color:#F8F7F7;
   --text-color: #2D2D29;
   --padding: 20px;
@@ -14,7 +16,7 @@
   --base-font: 20px;
   --small-font: 16px;
   --h1-size: 80px;
-  --h1-small-size: 50px;
+  --h1-small-size: 45px;
   --h3-size: 38px;
   --font-size-big: 60px;
   --font-size-medium:26px;
@@ -360,12 +362,13 @@ img{
     height:100%;
     padding:70px 40px;
   } 
-  h1, h2{
-    font-size:var(--h1-small-size)!important;
-  }
+  
 }
 
 @media screen and (max-width:768px){
+  h1, h2{
+    font-size:var(--h1-small-size)!important;
+  }
   h2.title-body{
     font-size:35px!important;
   }
