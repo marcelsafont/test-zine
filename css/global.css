@@ -316,13 +316,17 @@ img{
   height:100vh;
   background-color:var(--bg-color);
   display:flex;
-  animation: shrinkHeight 1.5s ease-in-out forwards, fadeOut 1.5s linear forwards;
+  
   justify-content: center;
   align-items: center;
 }
 
-#header-home .logo img{
-  animation: shrinkLogo 1.5s ease-in-out forwards;
+#header-home.animate{
+  animation: shrinkHeight 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, fadeOut 1s linear forwards;
+}
+
+#header-home.animate .logo img{
+  animation: shrinkLogo 1s ease-in-out forwards;
 }
 
 

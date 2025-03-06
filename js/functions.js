@@ -1,5 +1,7 @@
 addEventListener('DOMContentLoaded', function () {
 
+  const headerHome = document.querySelector('#header-home');
+  headerHome.classList.add('animate');
   // acordions
 
   const titles = document.querySelectorAll('.acordions .title')
