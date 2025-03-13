@@ -336,40 +336,41 @@ img{
 }
 
 #header-home.animate .logo svg path:nth-child(2){
-  animation: fadeInMove 0.5s ease-in-out forwards;
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 2.5s forwards;
 }
 
 #header-home.animate .logo svg path:nth-child(3){
-  animation: fadeInMove 0.5s ease-in-out forwards;
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 2.5s forwards;
 }
 
 #header-home.animate .logo svg path:nth-child(6){
-  animation: fadeInMove 0.5s ease-in-out forwards;
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 2.5s forwards;
 }
 
 #header-home.animate .logo svg path:first-child{
-  animation: fadeInMove 0.5s ease-in-out 0.7s forwards;
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) 0.7s forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 3s forwards;
 }
 
 #header-home.animate .logo svg path:nth-child(4){
-  animation: fadeInMove 0.5s ease-in-out 0.7s forwards;
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) 0.7s forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 3s forwards;
 }
 
 #header-home.animate .logo svg path:nth-child(5){
-  animation: fadeInMove 0.5s ease-in-out 0.7s forwards;
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) 0.7s forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 3s forwards;
 }
 
-#header-home.animate .logo svg circle{
-  animation: fadeIn 0.2s ease-in-out 1.5s forwards;
+#header-home.animate .logo svg circle:nth-child(7){
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 2.5s forwards;
 }
+#header-home.animate .logo svg circle:nth-child(8){
+  animation: fadeInMove 1s cubic-bezier(0.65, 0, 0.35, 1) 0.7s forwards, fadeInMoveUp 1s cubic-bezier(0.65, 0, 0.35, 1) 3s forwards;
+}
+
 
 #header-home.animate{
-  animation: shrinkHeight 1.5s ease-in-out 3.5s forwards;
+  animation: shrinkHeight 0.5s ease-in-out 3.5s forwards;
 }
 
-#header-home.animate .logo{
-  animation: fadeOut 1.5s ease-in 1.8s forwards, shrinkHeight 0.5s ease-in 3.5s forwards;
-}
 
 #header-home .container{
   min-width:1280px;
