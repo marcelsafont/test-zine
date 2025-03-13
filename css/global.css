@@ -309,7 +309,7 @@ img{
 
 #header-home{
   position:absolute;
-  top:70px;
+  top:00px;
   left:0;
   z-index:10;
   width:100%;
@@ -321,14 +321,54 @@ img{
   align-items: center;
 }
 
+#header-home .logo{
+  overflow: hidden;
+}
+
+.logo svg g circle{
+  opacity: 0;
+}
+
+.logo svg g path{
+  opacity:0;
+  transform: translate(0px, 200px);
+}
+
+#header-home.animate .logo svg path:nth-child(2){
+  animation: fadeInMove 0.2s ease-in-out forwards;
+}
+
+#header-home.animate .logo svg path:nth-child(3){
+  animation: fadeInMove 0.2s ease-in-out 0.2s forwards;
+}
+
+#header-home.animate .logo svg path:nth-child(6){
+  animation: fadeInMove 0.2s ease-in-out 0.4s forwards;
+}
+
+#header-home.animate .logo svg path:first-child{
+  animation: fadeInMove 0.2s ease-in-out 0.6s forwards;
+}
+
+#header-home.animate .logo svg path:nth-child(4){
+  animation: fadeInMove 0.2s ease-in-out 0.8s forwards;
+}
+
+#header-home.animate .logo svg path:nth-child(5){
+  animation: fadeInMove 0.2s ease-in-out 1s forwards;
+}
+
+#header-home.animate .logo svg circle{
+  animation: fadeIn 0.2s ease-in-out 1.2s forwards;
+}
+
 #header-home.animate{
-  animation: shrinkHeight 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, fadeOut 1s linear forwards;
+  animation: shrinkHeight 0.5s ease-in-out 2.5s forwards;
 }
 
-#header-home.animate .logo img{
-  animation: shrinkLogo 1s ease-in-out forwards;
+#header-home.animate .logo{
+  animation: fadeOut 0.5s ease-in 1.8s forwards, shrinkHeight 0.5s linear 2.5s forwards;
 }
-
 
 #header-home .container{
   min-width:1280px;
