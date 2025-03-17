@@ -1,9 +1,15 @@
+window.addEventListener("load", (event) => {
+  setTimeout(() => {
+    const headerHome = document.querySelector('#header-home');
+    if (headerHome) {
+      headerHome.classList.add('animate');
+    }
+  }, 100)
+});
+
 addEventListener('DOMContentLoaded', function () {
 
-  const headerHome = document.querySelector('#header-home');
-  if (headerHome) {
-    headerHome.classList.add('animate');
-  }
+  
   // acordions
 
   const titles = document.querySelectorAll('.acordions .title')
